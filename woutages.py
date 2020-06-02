@@ -3,7 +3,8 @@ import scrapy
 class OutageSpider(scrapy.Spider):
     name = 'outagespider'
     campina_grande = 18
-    start_urls = ['http://sic.cagepa.pb.gov.br/sigo_ocorrencia_falta_de_agua_comunicado_suspensao_site_grid/index.php?localidade=campina_grande']
+    # start_urls = ['http://sic.cagepa.pb.gov.br/sigo_ocorrencia_falta_de_agua_comunicado_suspensao_site_grid/index.php?localidade=campina_grande']
+    start_urls = ['http://sic.cagepa.pb.gov.br/sigo_ocorrencia_falta_de_agua_comunicado_suspensao_site_grid/index.php?localidade=18&enviar=OK']
 
     def parse(self, response):
         for evento in response.css('#sc-ui-grid-body-af2febbe>tr'):
